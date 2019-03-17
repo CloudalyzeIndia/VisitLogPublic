@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>GoogleReverseGeocodingAPIKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Google Reverse Geocoding API Key</shortDescription>
+        <value>AIzaSyAYbonkznGj-ZUK12t9znl2v46G_CVUKMw</value>
+    </labels>
+    <labels>
+        <fullName>GoogleReverseGeocodingAPIURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GoogleReverseGeocodingAPIURL</shortDescription>
+        <value>https://maps.googleapis.com/maps/api/geocode/json?latlng=</value>
+    </labels>
+    <labels>
+        <fullName>Google_Reverse_Geocoding_API_Key</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Google Reverse Geocoding API Key</shortDescription>
+        <value>AIzaSyAYbonkznGj-ZUK12t9znl2v46G_CVUKMw</value>
+    </labels>
+</CustomLabels>

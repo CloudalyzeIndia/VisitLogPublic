@@ -1,0 +1,38 @@
+<aura:component controller="CLZ_CheckIn" implements="force:appHostable,force:lightningQuickAction,lightning:isUrlAddressable,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="lat" type="Decimal" />
+    <aura:attribute name="lng" type="Decimal" />
+    <aura:attribute name="alreadyCheckedIn" type="boolean" default="false"/>
+    <aura:attribute name="checkInRecord" type="CheckIn__c"/>
+    <aura:attribute name="checkInTime" type="String"/>
+    <aura:attribute name="checkInLocation" type="String"/>
+    <aura:attribute name="locationFetched" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-text-align_center" style="font-size: 1.2em;color: black;background: lightgreen;">
+        <aura:if isTrue="{!v.alreadyCheckedIn}">
+            You are already checked-In 
+            <aura:if isTrue="{!v.checkInTime!=null}">
+                on {!v.checkInTime}<br></br>
+            </aura:if>
+            <aura:if isTrue="{!v.checkInLocation!=null}">
+                <u><b>Address</b></u>: {!v.checkInLocation}
+            </aura:if>
+        </aura:if>
+    </div>
+    
+    <div class="slds-grid slds-gutters" style="margin-top:5%">
+        <div class="slds-col">
+            <span class="slds-float_right" style="font-size:1.5em;">
+                <lightning:button variant="brand" label="Check-In" onclick="{!c.checkIn}" disabled="{!v.alreadyCheckedIn}"/>
+            </span>
+        </div>
+        <div class="slds-col">
+            <span class="slds-float_left" style="font-size:1.5em;">
+                <lightning:button variant="brand" label="Check-Out" onclick="{!c.checkOut}"/>
+            </span>
+        </div>
+    </div>
+    
+</aura:component>
